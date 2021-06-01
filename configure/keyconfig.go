@@ -8,8 +8,8 @@ import (
 )
 
 type Keys struct {
-	DestPubKey []byte
-	SrcPrivKey []byte
+	DestPubKey []byte `json: destpubkey`
+	SrcPrivKey []byte `json: srcprivkey`
 }
 
 func (k Keys) getSourcePrivateKey() (r *rsa.PrivateKey) {
